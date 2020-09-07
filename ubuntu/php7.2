@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update
+apt-get install -y --no-install-recommends software-properties-common
+add-apt-repository -y ppa:ondrej/php
+
+apt-get update
+apt-get install -y php7.2
+
+update-alternatives --set php /usr/bin/php7.2

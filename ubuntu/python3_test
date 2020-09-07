@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+##
+run="docker run --rm -ti -v ${PWD}:/test -w /test"
+
+##
+${run} ubuntu:20.04 bash -c "
+  bash ubuntu/python3
+  pip3 --version
+"
